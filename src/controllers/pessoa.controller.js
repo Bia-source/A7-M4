@@ -7,7 +7,13 @@
 // - Deletar um objeto
 // CRUD
 
-import { Pessoa } from "../models/Pessoa.model.js";
+// quando preciso de {}
+// quando nao colocamos default ou quando tem varios recursos
+// dentro de um arquivo
+
+// quando nao preciso de {} quando queremos o recurso
+// default/padrao
+import Pessoa from "../models/Pessoa.model.js";
 
 // representando nosso banco de dados
 // banco de dados simulado
@@ -23,5 +29,6 @@ export const buscarTodos = () => {
 }
 
 export const buscarPorNome = (nome) => {
-    return listaPessoas.find(pessoa => pessoa.nome === nome);
+    // return listaPessoas.find(pessoa => pessoa.nome === nome);
+    return listaCarro.filter(({ nome })=> nome == nome);
 }
